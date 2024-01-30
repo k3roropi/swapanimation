@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dailybuttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#dailybuttons button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#Monday { background-color: #a832a6; }
+#Tuesday { background-color: #d63384; }
+#Wednesday { background-color: #dc3545; }
+#Thursday { background-color: #fd7e14; }
+#Friday { background-color: #ffc107; }
+#Saturday { background-color: #28a745; }
+#Sunday { background-color: #17a2b8; }
+
+#Monday:hover, #Tuesday:hover, #Wednesday:hover, #Thursday:hover, #Friday:hover, #Saturday:hover, #Sunday:hover {
+    transition: 0.3s;
+    transform: scale(1.06);
+}
+
+#Monday:active, #Tuesday:active, #Wednesday:active, #Thursday:active, #Friday:active, #Saturday:active, #Sunday:active {
+    box-shadow: 0 5px #727272;
+    transform: translateY(4px);
+}
+
+#Animation {
+    width: 500px;
+    height: 500px;
+    border: 10px solid transparent;
+    position: relative;
+    background-color: #FFF;
+    margin-left: 20px; /* Adjusted margin left */
+    margin-right: 20px; /* Added margin right */
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+@keyframes upAndDown {
+    0% { transform: translateY(-100vh); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; background-color: white; border-color: color; }
+}
+
+@keyframes resetPosition {
+    0% { transform: translateY(0); opacity: 1; border-color: color; background-color: white; }
+    100% { transform: translateY(-100vh); }
+}
+
+@media (max-width: 670px) {
+    body {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 850px) {
+    body {
+        padding: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        padding: 100px;
+    }
+}
+
+.animate {
+    animation: upAndDown 2s ease-in-out forwards;
+}
